@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+  <style>
+
+    body {margin: 0;}
+
+    ul.topnav {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background-color: orange;
+    }
+
+    ul.topnav li {float: right;}
+
+    ul.topnav li a {
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+
+
+    ul.topnav li a.active {background-color: blue;}
+
+    ul.topnav li.right {float: right;}
+
+    @media screen and (max-width: 600px) {
+      ul.topnav li.right,
+      ul.topnav li {float: none;}
+    }
+
+        body {
+          background: #fff;
+          color: #666666;
+          font-family: "Open Sans", sans-serif;
+        }
+
+        a {
+          color: #18d26e;
+          transition: 0.5s;
+        }
+
+        a:hover,
+        a:active,
+        a:focus {
+          color: #18d36e;
+          outline: none;
+          text-decoration: none;
+        }
+
+        p {
+          padding: 0;
+          margin: 0 0 30px 0;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+          font-family: "Montserrat", sans-serif;
+          font-weight: 400;
+          margin: 0 0 20px 0;
+          padding: 0;
+        }
+
+        services {
+          background: #fff;
+          background-size: cover;
+          padding: 60px 0 40px 0;
+        }
+
+        services .box {
+          margin-bottom: 30px;
+        }
+
+        services .icon {
+          float: left;
+        }
+
+        services .icon i {
+          color: #18d26e;
+          font-size: 36px;
+          line-height: 1;
+          transition: 0.5s;
+        }
+
+        services .title {
+          margin-left: 60px;
+          font-weight: 700;
+          margin-bottom: 15px;
+          font-size: 18px;
+        }
+
+        services .title a {
+          color: #111;
+        }
+
+        services .box:hover .title a {
+          color: #18d26e;
+        }
+
+        services .description {
+          font-size: 14px;
+          margin-left: 60px;
+          line-height: 24px;
+          margin-bottom: 0;
+        }
+
+
+          contact {
+            padding: 60px 0;
+          }
+
+          contact .contact-info {
+            margin-bottom: 20px;
+            text-align: center;
+          }
+
+          contact .contact-info i {
+            font-size: 48px;
+            display: inline-block;
+            margin-bottom: 10px;
+            color: #18d26e;
+          }
+
+          contact .contact-info address,
+          contact .contact-info p {
+            margin-bottom: 0;
+            color: #000;
+          }
+
+          contact .contact-info h3 {
+            font-size: 18px;
+            margin-bottom: 15px;
+            font-weight: bold;
+            text-transform: uppercase;
+            color: #999;
+          }
+          contact .contact-info a {
+            color: #000;
+          }
+
+          contact .contact-info a:hover {
+            color: #18d26e;
+          }
+          contact .contact-address,
+          contact .contact-phone,
+          contact .contact-email {
+            margin-bottom: 20px;
+          }
+
+          contact .form sendmessage {
+            color: #18d26e;
+            border: 1px solid #18d26e;
+            display: none;
+            text-align: center;
+            padding: 15px;
+            font-weight: 600;
+            margin-bottom: 15px;
+          }
+
+          contact .form errormessage {
+            color: red;
+            display: none;
+            border: 1px solid red;
+            text-align: center;
+            padding: 15px;
+            font-weight: 600;
+            margin-bottom: 15px;
+          }
+
+          contact .form sendmessage.show,
+          contact .form errormessage.show,
+          contact .form .show {
+            display: block;
+          }
+
+          contact .form .validation {
+            color: red;
+            display: none;
+            margin: 0 0 20px;
+            font-weight: 400;
+            font-size: 13px;
+          }
+
+          contact .form input,
+          contact .form textarea {
+            padding: 10px 14px;
+            border-radius: 0;
+            box-shadow: none;
+            font-size: 15px;
+          }
+
+          contact .form button[type="submit"] {
+            background: #18d26e;
+            border: 0;
+            padding: 10px 30px;
+            color: #fff;
+            transition: 0.4s;
+            cursor: pointer;
+          }
+
+          contact .form button[type="submit"]:hover {
+            background: #13a456;
+          }
+
+
+
+
+        @media (min-width: 768px) {
+          contact .contact-address,
+          contact .contact-phone,
+          contact .contact-email {
+            padding: 20px 0;
+          }
+
+          contact .contact-phone {
+            border-left: 1px solid #ddd;
+            border-right: 1px solid #ddd;
+          }
+        }
+
+        @media (min-width: 1024px) {
+          header logo {
+            padding-left: 60px;
+          }
+
+          nav-menu-container {
+            padding-right: 60px;
+          }
+        }
+
+        @media (max-width: 768px) {
+          .back-to-top {
+            bottom: 15px;
+          }
+
+          header logo h1 {
+            font-size: 28px;
+          }
+
+          header logo img {
+            max-height: 40px;
+          }
+
+
+          nav-menu-container {
+            display: none;
+          }
+
+          mobile-nav-toggle {
+            display: inline;
+          }
+  </style>
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="" name="keywords" />
+    <meta content="" name="description" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Montserrat:300,400,500,700"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  </head>
+
+  <body>
+    <ul class="topnav">
+      <li><a class="active">Shahrukh</a></li>
+      <li><a>Services</a></li>
+      <li><a>Contact</a></li>
+    </ul>
+
+    <!-- #header -->
+
+    <div class="container-fluid bg-1 text-center">
+      <h3 class="margin">I am Shahrukh</h3>
+      <img
+        src="https://images.unsplash.com/photo-1582546997638-65b07441bece?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=334&q=80"
+        class="img-responsive img-square margin"
+        style="display:inline"
+        alt="Shahrukh"
+        width="350"
+        height="350"
+      />
+    </div>
+
+    <main id="main">
+      <!--==========================
+      Services Section
+    ============================-->
+      <section id="services">
+        <div class="container">
+          <header class="section-header wow fadeInUp">
+            <h3>Services</h3>
+            <p></p>
+          </header>
+
+          <div class="row">
+            <div
+              class="col-lg-4 col-md-6 box wow bounceInUp"
+              data-wow-duration="1.4s"
+            >
+              <div class="icon"><i class="ion-ios-analytics-outline"></i></div>
+              <h4 class="title"><a href="">Wordpress</a></h4>
+              <p class="description">
+                We design and develop stunning, SEO optimized and mobile
+                responsive WordPress websites.
+              </p>
+            </div>
+            <div
+              class="col-lg-4 col-md-6 box wow bounceInUp"
+              data-wow-duration="1.4s"
+            >
+              <div class="icon"><i class="ion-ios-bookmarks-outline"></i></div>
+              <h4 class="title"><a href="">Android Development</a></h4>
+              <p class="description">
+                We develop efficient, innovative and user-friendly websites with
+                continuous maintenance.
+              </p>
+            </div>
+            <div
+              class="col-lg-4 col-md-6 box wow bounceInUp"
+              data-wow-duration="1.4s"
+            >
+              <div class="icon"><i class="ion-ios-paper-outline"></i></div>
+              <h4 class="title"><a href="">Software Development</a></h4>
+              <p class="description">
+                We develop optimized and interactive custom applications for
+                various Android devices.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- #services -->
+
+      <!--==========================
+      Contact Section
+    ============================-->
+      <section id="contact" class="section-bg wow fadeInUp">
+        <div class="container">
+          <div class="section-header">
+            <h3>Contact Us</h3>
+            <p>
+              Feel Free to contract us
+            </p>
+          </div>
+
+          <div class="row contact-info">
+            <div class="col-md-4">
+              <div class="contact-address">
+                <i class="ion-ios-location-outline"></i>
+                <h3>Address</h3>
+                <address>Knct Hub street 7 i-10/3 Islamabad</address>
+              </div>
+            </div>
+
+            <div class="col-md-4">
+              <div class="contact-phone">
+                <i class="ion-ios-telephone-outline"></i>
+                <h3>Phone Number</h3>
+                <p><a href="tel:03246809605">+1 5589 55488 55</a></p>
+              </div>
+            </div>
+
+            <div class="col-md-4">
+              <div class="contact-email">
+                <i class="ion-ios-email-outline"></i>
+                <h3>Email</h3>
+                <p>
+                  <a href="mailto:info@pookidevs.com">pookidevs@example.com</a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- #contact -->
+    </main>
+  </body>
+</html>
